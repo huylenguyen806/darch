@@ -22,6 +22,8 @@ mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 
 echo "Setting up pyenv"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 pyenv install 3.7.7
 pyenv install 2.7.17
 pyenv shell 2.7.17 && pip install neovim
