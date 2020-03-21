@@ -22,11 +22,11 @@ mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 
 echo "Setting up pyenv"
-pyenv install 3.7.4
+pyenv install 3.7.7
 pyenv install 2.7.17
 pyenv shell 2.7.17 && pip install neovim
-pyenv shell 3.7.4 && pip install neovim pylint autopep8 tensorflow flask flask-cors flask-socketio python-dotenv nltk pandas sox soundfile absl-py librosa tensorflow-addons matplotlib pytorch
-pyenv global 3.7.4
+pyenv shell 3.7.7 && pip install neovim pylint autopep8 tensorflow flask flask-cors flask-socketio python-dotenv nltk pandas sox soundfile absl-py librosa tensorflow-addons matplotlib pytorch
+pyenv global 3.7.7
 
 echo "Setting up zsh ..."
 # Oh my zsh
