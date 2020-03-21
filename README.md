@@ -21,3 +21,5 @@ docker build -t tagname -f docker/Dockerfile .
 ## Running
 
 Everytime ```darch``` command is executed, it will exec into docker container in commandline interface.
+
+Or you run ```docker-compose up -d```

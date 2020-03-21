@@ -21,6 +21,9 @@ pacman -Syu --noconfirm gcc go ruby git make cmake openssh wget curl fzf \
 
 echo "Installing pyenv ..."
 curl https://pyenv.run | bash
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 pyenv install 3.7.4
 pyenv install 2.7.17
 pyenv shell 2.7.17 && pip install neovim
