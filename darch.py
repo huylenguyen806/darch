@@ -12,6 +12,9 @@ DEFAULT_WORKSPACE = "/root"
 EXEC_FORMAT = 'docker exec --workdir \"{}\" -it {} zsh {}'
 PLATFORM = platform.system()
 
+if PLATFORM == "Windows":
+    import win32api
+
 try:
     client = docker.from_env()
 except BaseException:
@@ -20,7 +23,6 @@ except BaseException:
     exit()
 
 if PLATFORM == 'Windows':
-    import win32api
     drives_list = win32api.GetLogicalDriveStrings().split('\\\x00')[:-1]
     # Default for sharing all drives
     drives = list(map(lambda d: {
