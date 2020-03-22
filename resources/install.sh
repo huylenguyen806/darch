@@ -15,7 +15,8 @@ echo "Installing vundle.vim ..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 echo "Setting up yarn ..."
-yarn global add spaceship-prompt coffeescript typescript react react-cli create-react-app react-native react-native-cli
+yarn global add spaceship-prompt coffeescript typescript react react-cli create-react-app react-native react-native-cli neovim
+gem install neovim
 
 echo "Setting up npm ..."
 mkdir ~/.npm-global
