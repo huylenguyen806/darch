@@ -176,7 +176,6 @@ export JAVA_HOME=/usr/lib/jvm/default
 
 # pyenv
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
