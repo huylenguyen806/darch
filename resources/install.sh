@@ -39,14 +39,12 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosu
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/zsh-syntax-highlighting
 
 echo "Copying configs ..."
-cp -r /root/resources/configs/* /root/.configs
+cp -r /root/resources/config/* /root/.config
 cp -rT /root/resources/home /root
 
 # change own of home dir
 chown -R root:root /root
 
 mkdir -p /root/drives
-
-ln -s $HOME/.zshrc /etc/profile.d/env.sh
 
 echo "Setup darch completed"
