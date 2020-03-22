@@ -114,7 +114,7 @@ if not CONTAINER_EXIST:
 
 if args.cmd:
     cmd = EXEC_FORMAT.format(docker_dir, container_name,
-                             '-l -c \"{}\"'.format(' '.join(args.cmd)))
+                             '-c \"{}\"'.format(' '.join(args.cmd)))
 else:
     cmd = EXEC_FORMAT.format(docker_dir, container_name, "")
 
