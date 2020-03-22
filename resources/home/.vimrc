@@ -134,8 +134,6 @@ let g:netrw_liststyle = 3
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 " end netrw config
-execute pathogen#infect()
-call pathogen#helptags()
 
 " start NERDTree config
 let NERDTreeShowHidden = 1
