@@ -2,19 +2,17 @@
 cd $HOME
 
 echo "Installing apps ..."
-pacman -Syu --noconfirm gcc go ruby git make cmake openssh wget curl fzf \
+pacman -Syu --noconfirm --needed gcc go ruby git make cmake openssh wget curl fzf \
     p7zip unrar unzip zip unarchiver bzip2 gzip lrzip lz4 lzip lzop xz tar \
+    base-devel openssl zlib readline sqlite llvm ncurses xz tk python-pyopenssl libffi \
     python python-pip python2 python2-pip pyenv \
     vim neovim zsh \
     nodejs yarn npm \
     jdk-openjdk jre-openjdk maven \
-    texlive-core texlive-lang \
-    ffmpeg libffi
+    texlive-core texlive-lang ffmpeg
 
 echo "Installing vundle.vim ..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-pip install neovim
-pip2 install neovim
 
 echo "Setting up yarn ..."
 yarn global add spaceship-prompt coffeescript typescript react react-cli create-react-app react-native react-native-cli
@@ -27,7 +25,9 @@ echo "Setting up pyenv"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 pyenv install 3.7.7
-pyenv shell 3.7.7 && pip install pylint autopep8 tensorflow flask flask-cors flask-socketio python-dotenv nltk pandas sox soundfile absl-py librosa tensorflow-addons matplotlib pytorch
+pyenv install 2.7.17
+pyenv shell 2.7.17 && pip install neovim
+pyenv shell 3.7.7 && pip install neovim pylint autopep8 tensorflow flask flask-cors flask-socketio python-dotenv nltk pandas sox soundfile absl-py librosa tensorflow-addons matplotlib torch
 pyenv global 3.7.7
 
 echo "Setting up zsh ..."
