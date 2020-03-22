@@ -55,13 +55,13 @@ else:  # Linux and MacOS
 parser = argparse.ArgumentParser(description='Darch full command flags')
 parser.add_argument('cmd', metavar='cmd', nargs='*',
                     help="command and arguments")
-parser.add_argument('--workdir', metavar='-w', type=str,
+parser.add_argument('--workdir', '-w', type=str,
                     help="Where to operate this command, default to current directory")
-parser.add_argument('--detach', metavar='-d',
+parser.add_argument('--detach', '-d',
                     action='store_true', help="Start in detach mode")
-parser.add_argument('--image', metavar='-i', type=str,
+parser.add_argument('--image', '-i', type=str,
                     default=DEFAULT_IMAGE_TAG, help="Docker image tag")
-parser.add_argument('--container', metavar='-c', type=str,
+parser.add_argument('--container', '-c', type=str,
                     default=DEFAULT_CONTAINER, help="Docker container name")
 args = parser.parse_args()
 
