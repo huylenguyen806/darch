@@ -102,13 +102,20 @@ if not CONTAINER_EXIST:
         'volumes': {
             **volumes
         },
-        'network': 'host',
+        'network': 'bridge',
         'working_dir': DEFAULT_WORKSPACE,
         'restart_policy': {
             'Name': 'always'
         },
         'tty': True,
-        'detach': True
+        'detach': True,
+        'ports': {
+            3000:3000,
+            4000:4000,
+            5000:5000,
+            8080:8080,
+            80:80,
+        }
     }
     client.containers.run(**config)
 
