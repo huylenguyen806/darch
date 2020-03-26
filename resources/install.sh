@@ -9,7 +9,9 @@ pacman -Syu --noconfirm --needed gcc go ruby git make cmake openssh wget curl fz
     vim neovim zsh \
     nodejs yarn npm \
     jdk-openjdk jre-openjdk maven \
-    texlive-core texlive-lang ffmpeg
+    texlive-core texlive-lang ffmpeg \
+    boost swig sox \
+    neofetch
 
 echo "Installing vundle.vim ..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
